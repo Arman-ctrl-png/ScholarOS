@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarOS | Virtual Study Desktop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="desktop" id="desktop">
+
+        <!-- TOP BAR: Date + Day -->
+        <div class="top-bar">
+            <div class="date-display">
+                <span id="day-name"></span>
+                <span id="full-date"></span>
+            </div>
+            <div class="top-title">ScholarOS</div>
+            <div class="top-right">Study Mode 🚀</div>
+        </div>
+
+        <!-- CLOCK bottom left -->
+        <div class="clock-wrap">
+            <span id="clock">00:00:00</span>
+        </div>
+
+        <!-- CENTER ICONS -->
+        <div class="center-ui">
+
+            <div class="icon-grid">
+
+                <div class="app-tile" onclick="openApp('wallpaper')">
+                    <i class="fas fa-image" style="color:#ff6b6b;"></i>
+                    <span>Wallpapers</span>
+                </div>
+
+                <div class="app-tile" onclick="openApp('timetable')">
+                    <i class="fas fa-calendar-alt" style="color:#4ecdc4;"></i>
+                    <span>Time Table</span>
+                </div>
+
+                <div class="app-tile" onclick="openApp('notes')">
+                    <i class="fas fa-edit" style="color:#ffe66d;"></i>
+                    <span>Notes</span>
+                </div>
+
+                <div class="app-tile" onclick="openApp('timer')">
+                    <i class="fas fa-clock" style="color:#a29bfe;"></i>
+                    <span>Timer</span>
+                </div>
+
+                <div class="app-tile" onclick="openApp('library')">
+                    <i class="fas fa-book" style="color:#1dd1a1;"></i>
+                    <span>Library</span>
+                </div>
+
+                <div class="app-tile" onclick="openApp('calculator')">
+                    <i class="fas fa-calculator" style="color:#fd79a8;"></i>
+                    <span>Calculator</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="window-container"></div>
+    </div>
+
+    <!-- TASKBAR -->
+    <div class="taskbar">
+        <div class="start-btn">
+            <i class="fas fa-graduation-cap"></i> ScholarOS
+        </div>
+        <div class="taskbar-clock" id="taskbar-time"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
